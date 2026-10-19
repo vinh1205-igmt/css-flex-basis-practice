@@ -1,0 +1,86 @@
+/* Reset CSS cơ bản */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+h2 {
+    color: #333333;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Base style cho container & items */
+.container {
+    display: flex;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.item {
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+/* --- Ví dụ 1: flex-basis với đơn vị px --- */
+.ex1 .item {
+    background-color: lightblue;
+    color: #1a5276;
+}
+.ex1 .item1 {
+    flex-basis: 200px;
+}
+.ex1 .item2 {
+    flex-basis: 100px;
+}
+.ex1 .item3 {
+    flex-basis: 150px;
+}
+
+/* --- Ví dụ 2: flex-basis với flex-direction: column --- */
+.ex2 {
+    flex-direction: column;
+    height: 400px;
+}
+.ex2 .item {
+    background-color: lightgreen;
+    color: #1e8449;
+    flex-basis: 100px; /* Tác động theo chiều dọc do main axis là column */
+}
+
+/* --- Ví dụ 3: flex-basis với phần trăm % --- */
+.ex3 .item {
+    background-color: lightcoral;
+    color: #78281f;
+    flex-basis: 50%; /* Mỗi item chiếm cơ sở 50% độ rộng container */
+}
+
+/* --- Ví dụ 4: Kết hợp flex-basis và flex-grow --- */
+.ex4 {
+    width: 600px;
+}
+.ex4 .item {
+    background-color: #f39c12;
+    color: #ffffff;
+    flex-basis: 100px;
+}
+.ex4 .item1 {
+    flex-grow: 1;
+}
+.ex4 .item2 {
+    flex-grow: 2; /* Nhận gấp đôi phần không gian trống so với item1 và item3 */
+}
+.ex4 .item3 {
+    flex-grow: 1;
+}
